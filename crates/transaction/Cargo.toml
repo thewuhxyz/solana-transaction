@@ -80,8 +80,9 @@ version = "2.1.0"
 optional = true
 
 [dependencies.solana-message]
+workspace = true
 # version = "=0.0.2"
-path = "../message"
+# path = "../message"
 # version = "=0.0.3"
 
 [dependencies.solana-precompiles]
@@ -110,8 +111,9 @@ optional = true
 version = "2.1.0"
 
 [dependencies.solana-signer]
+workspace = true
 # version = "=0.0.2"
-path = "../signer"
+# path = "../signer"
 optional = true
 
 [dependencies.solana-system-interface]

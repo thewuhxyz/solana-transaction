@@ -18,7 +18,7 @@ solana-account = { version = "=2.1.13", features = ["bincode"]}
 solana-instruction = { path = "crates/instruction", features = ["std", "bincode"] }
 solana-system-interface = { path = "crates/system-interface", features = ["std", "bincode"]}
 solana-message = { path = "crates/message", features = ["bincode"]}
-solana-signer = { path = "crates/signer", features = ["bincode"]}
+solana-signer = { path = "crates/signer" }
 solana-program = {version = "=2.1.13"}
 solana-pubkey = {version = "=2.1.13", features = ["serde"]}
 solana-hash = {version = "=2.1.13", features = ["serde"]}
