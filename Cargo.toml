@@ -1,0 +1,31 @@
+[workspace]
+members = [
+  "crates/*",
+]
+resolver = "2"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1
+
+[workspace.dependencies]
+solana-account = { version = "=2.1.13", features = ["bincode"]}
+solana-instruction = { path = "crates/instruction", features = ["std", "bincode"] }
+solana-system-interface = { path = "crates/system-interface", features = ["std", "bincode"]}
+solana-message = { path = "crates/message", features = ["bincode"]}
+solana-signer = { path = "crates/signer", features = ["bincode"]}
+solana-program = {version = "=2.1.13"}
+solana-pubkey = {version = "=2.1.13", features = ["serde"]}
+solana-hash = {version = "=2.1.13", features = ["serde"]}
+solana-sha256-hasher = {version = "=2.1.13", features = ["sha2"]}
+solana-transaction = { path = "crates/transaction", features = ["bincode"]}
+
+[patch.crates-io]
+solana-instruction = { path = "crates/instruction" }
+
+
