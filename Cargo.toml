@@ -27,5 +27,6 @@ solana-transaction = { path = "crates/transaction", features = ["bincode"]}
 
 [patch.crates-io]
 solana-instruction = { path = "crates/instruction" }
+solana-message = { path = "crates/message" }
 
 
